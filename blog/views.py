@@ -29,3 +29,8 @@ def store_data(request):
     return render(request, 'blog/blogpage.html', {
         'blogPosts': BlogPost.objects.all()
     })
+
+def show_fullpost(request, blog_id):
+    return render(request, 'blog/fullpost.html', {
+        'fullPost': BlogPost.objects.get(id=blog_id)
+    })

@@ -4,6 +4,6 @@
     {% for i in blogPosts %}
     <h2 class='blogTitle'>{{ i.title }}</h2>
     <p class='blogContent' style="display: inline-block">{{ i.content }}</p>
-    <a href="{% url 'index' %}">Expand</a> {% endfor %}
+    <a href="{% url 'fullpost' i.id %}">Expand</a> {% endfor %}
 </div>
 {% endblock %}
