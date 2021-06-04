@@ -5,5 +5,6 @@
     <h2 class='blogTitle'>{{ i.title }}</h2>
     <p class='blogContent' style="display: inline-block">{{ i.content }}</p>
     <a href="{% url 'fullpost' i.id %}">Expand</a> {% endfor %}
+    <a href="{% url 'compose' %}" style="display: block">New Post</a>
 </div>
 {% endblock %}
