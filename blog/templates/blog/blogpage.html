@@ -1,0 +1,6 @@
+{% extends 'blog/layout.html' %} {% block title %} Blog Page {% endblock %} {% block content %}
+<h1>Joel's Blog</h1>
+{% for i in blogPosts %}
+<h2>{{ i.title }}</h2>
+<p>{{ i.content }}</p>
+{% endfor %} {% endblock %}

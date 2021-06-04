@@ -1,0 +1,7 @@
+{% extends 'blog/layout.html' %} {% block title %} Compose {% endblock %} {% block content %}
+<h1>Today's Journal</h1>
+<form action="{% url 'compose' %}" method='post'>
+    {% csrf_token %} {{ composeForm }}
+    <button type='submit'>Add Post</button>
+</form>
+{% endblock %}
