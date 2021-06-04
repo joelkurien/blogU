@@ -1,6 +1,9 @@
-{% extends 'blog/layout.html' %} {% block title %} Blog Page {% endblock %} {% block content %}
+{% extends 'blog/layout.html' %} {% block title %} Blog Page {% endblock %} {% block body %}
 <h1>Joel's Blog</h1>
-{% for i in blogPosts %}
-<h2>{{ i.title }}</h2>
-<p>{{ i.content }}</p>
-{% endfor %} {% endblock %}
+<div>
+    {% for i in blogPosts %}
+    <h2 class='blogTitle'>{{ i.title }}</h2>
+    <p class='blogContent' style="display: inline-block">{{ i.content }}</p>
+    <a href="{% url 'index' %}">Expand</a> {% endfor %}
+</div>
+{% endblock %}

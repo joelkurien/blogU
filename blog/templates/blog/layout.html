@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -11,8 +12,9 @@
 </head>
 
 <body>
-    {% block content%} {% endblock %}
+    {% block body%} {% endblock %}
     <!-- <script src="" async defer></script> -->
+    <script src="{% static 'blog/index.js' %}"></script>
 </body>
 
 </html>
